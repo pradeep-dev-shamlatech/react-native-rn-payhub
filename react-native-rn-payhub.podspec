@@ -9,14 +9,14 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   react-native-rn-payhub
                    DESC
-  s.homepage     = "https://github.com/github_account/react-native-rn-payhub"
+  s.homepage     = "https://github.com/pradeep-dev-shamlatech/react-native-rn-payhub"
   # brief license entry:
   s.license      = "MIT"
   # optional - use expanded license entry instead:
   # s.license    = { :type => "MIT", :file => "LICENSE" }
-  s.authors      = { "Your Name" => "yourname@email.com" }
+  s.authors      = { "Pradeep Tripathi" => "pradeep@shamlatech.com" }
   s.platforms    = { :ios => "9.0" }
-  s.source       = { :git => "https://github.com/github_account/react-native-rn-payhub.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/pradeep-dev-shamlatech/react-native-rn-payhub.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,c,m,swift}"
   s.requires_arc = true

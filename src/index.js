@@ -29,22 +29,22 @@ class example extends Component {
           description: 'Credits towards consultation',
           image: 'https://i.imgur.com/3g7nmJC.png',
           currency: 'INR',
-          key: 'rzp_test_1DP5mmOlF5G5ag',
+          key: 'thepay_test_1DP5mmOlF5G5ag',
           amount: '5000',
           external: {
-            wallets: ['paytm']
+            wallets: ['paypal']
           },
           name: 'foo',
           prefill: {
-            email: 'akshay@razorpay.com',
+            email: 'pradeep89jai@gmail.com',
             contact: '8955806560',
-            name: 'Akshay Bhalotia'
+            name: 'Pradeep Tripathi'
           },
           theme: {color: '#F37254'}
         }
         RnPayhub.open(options).then((data) => {
           // handle success
-          alert(`Success: ${data.razorpay_payment_id}`);
+          alert(`Success: ${data}`);
         }).catch((error) => {
           // handle failure
           alert(`Error: ${error.code} | ${error.description}`);
