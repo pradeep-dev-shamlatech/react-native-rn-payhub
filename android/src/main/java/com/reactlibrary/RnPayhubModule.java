@@ -1,9 +1,13 @@
 package com.reactlibrary;
 
+import android.webkit.WebView;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.gateway.sdk.exception.ApplicationError;
+import com.gateway.sdk.payment.PaymentFactory;
 
 public class RnPayhubModule extends ReactContextBaseJavaModule {
 
@@ -12,6 +16,14 @@ public class RnPayhubModule extends ReactContextBaseJavaModule {
     public RnPayhubModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
+
+        //TODO: Test code please remove
+        WebView webView = new WebView(getCurrentActivity());
+        try {
+            PaymentFactory.newInstance().renderIFrameIntoWebView(webView, "");
+        } catch (ApplicationError applicationError) {
+            applicationError.printStackTrace();
+        }
     }
 
     @Override
